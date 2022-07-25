@@ -28,22 +28,30 @@ Building and running
 This is the wiring diagram for BMI160 sensor varieties on the market either SPI or I2C communications.
 I had the left one in my local distributors.
 
-![Screenshot](testing/BMI160.png)
+.. image:: testing/BMI160.png
+   :width: 800
 
 Pins of the SPI_0 port on nRF52832 are configured in device tree * ``boards\arm\pedal_board\pedal_board.dt``
 
 Here is the connection table,
 
-| BMI160        | NRF52832      |
-| ------------- | ------------- |
-| Green(SCK)    | Pin 12        |
-| Yellow(MOSI)  | Pin 13        |
-| Blue(MISO)    | Pin14         |
-| Gray(SS)      | Pin 11        |
++--------------+------------+
+|    BMI160    | nRF52832   | 
+|              |            |
++==============+============+
+| Green(SCK)   |  Pin 12    |
++--------------+------------+
+| Yellow(MOSI) |  Pin 13    |
++--------------+------------+
+| Blue(MISO)   |  Pin 14    |
++--------------+------------+
+| Gray(SS)     |  Pin 11    |
++--------------+------------+
 
 I have connected all on a breadboard for ease of development.
 
-![Screenshot](testing/myDevBoard.png)
+.. image:: testing/myDevBoard.jpg
+   :width: 400
 
 
 
