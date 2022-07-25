@@ -9,6 +9,9 @@ target_sources(app PRIVATE src/main.c)
 
 target_sources(app PRIVATE
   src/bmx160.c
+  src/quaternion.c
+  src/sensor_processing_lib.c
+  src/vector_3d.c
 )
 
 

@@ -53,9 +53,9 @@ C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/CMakeFiles/
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/libc/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/libc/CMakeFiles/rebuild_cache.dir
-C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir
-C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/libc/minimal/CMakeFiles/edit_cache.dir
-C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/libc/minimal/CMakeFiles/rebuild_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/libc/newlib/CMakeFiles/lib__libc__newlib.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/libc/newlib/CMakeFiles/edit_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/libc/newlib/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/posix/CMakeFiles/lib__posix.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/posix/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/lib/posix/CMakeFiles/rebuild_cache.dir

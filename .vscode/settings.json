@@ -9,6 +9,11 @@
   ],
   "files.associations": {
     "printk.h": "c",
-    "bmx160.h": "c"
+    "bmx160.h": "c",
+    "sensor_processing_lib.h": "c",
+    "quaternion.h": "c",
+    "vector_3d.h": "c",
+    "math.h": "c",
+    "armclang.h": "c"
   }
 }

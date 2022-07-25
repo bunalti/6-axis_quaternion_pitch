@@ -27,7 +27,8 @@ Usage
 ********
 To use the library, read the accelerometer, gyro values, and calculate the time taken to complete a loop.
 
-```
+````
+```C
 
 /*
 fused_vector - corrected accelerometer readings
@@ -45,6 +46,7 @@ q_acc = quaternion_from_accelerometer(fused_vector.a,fused_vector.b,fused_vector
 angles = quaternion_to_euler_angles(q_acc);
 
 ```
+````
 
 Note: To calculate correct delta please synchronize sensor readings with the software.
 

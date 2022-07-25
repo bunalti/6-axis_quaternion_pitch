@@ -1,5 +1,6 @@
 #include "sensor_processing_lib.h"
 
+
 Quaternion quaternion_from_accelerometer(float ax, float ay, float az)
 {
     /*vector_ijk gravity = vector_3d_initialize(0.0f, 0.0f, -1.0f);

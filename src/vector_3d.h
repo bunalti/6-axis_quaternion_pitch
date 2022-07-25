@@ -5,7 +5,7 @@ extern "C" {
 #ifndef VECTOR_3D_INCLUDED
 #define VECTOR_3D_INCLUDED
 
-#include <math.h>
+#include <math.h> 
 
 typedef struct vector_ijk {
 

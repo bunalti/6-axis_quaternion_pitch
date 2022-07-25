@@ -12,6 +12,10 @@
 
 #include "bmx160.h"
 
+#include "quaternion.h"
+#include "sensor_processing_lib.h"
+#include "vector_3d.h"
+
 /*****BMX160 IMU SPI*****/
 bmx160_spi  bmxIMU_spi = {
 	.spi_cfg = {
@@ -26,9 +30,14 @@ bmx160_spi  bmxIMU_spi = {
 
 bmx160_sensor_data bmx160_data;
 
+float delta,wx,wy,wz;
+euler_angles angles;
+vector_ijk fused_vector;
+Quaternion q_acc; 
+float pitch_angle;
+
+
 #define SENSOR_READ_MS_THREAD   0.625 //ms = 1600 HZ
-
-
 LOG_MODULE_REGISTER(app, CONFIG_LOG_DEFAULT_LEVEL);
 
 void main(void)
@@ -66,6 +75,30 @@ void main(void)
 
     // Read filtered BMX160 IMU data at 200MHZ and store it to the struct
 	getData_bmx160(&bmxIMU_spi, &bmx160_data);
+
+	delta = 0.001f * SENSOR_READ_MS_THREAD;
+	//  Serial.print("Time Delta: \t");
+	//  Serial.print(delta,16);
+	//  Serial.println();
+
+	fused_vector = update_fused_vector(fused_vector,
+									   bmx160_data.ax,bmx160_data.ay,bmx160_data.az,
+									   bmx160_data.gx,bmx160_data.gy,bmx160_data.gz,
+									   delta);
+
+	q_acc = quaternion_from_accelerometer(fused_vector.a,fused_vector.b,fused_vector.c);
+	angles = quaternion_to_euler_angles(q_acc);
+
+	if(angles.yaw > 0 && angles.pitch > 0)
+		pitch_angle = angles.pitch;
+	else if(angles.yaw < 0 && angles.pitch > 0)
+		pitch_angle = 180 - angles.pitch;
+	else if(angles.yaw > 0 && angles.pitch < 0)
+		pitch_angle = 180 - angles.pitch;    
+	else if(angles.yaw < 0 && angles.pitch < 0)
+		pitch_angle = 360 + angles.pitch;
+	else;
+
 
     // Sleep and wait for next cycle
 	k_sleep(K_MSEC(SENSOR_READ_MS_THREAD));
