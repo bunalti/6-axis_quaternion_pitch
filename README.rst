@@ -23,12 +23,12 @@ The orientation is calculated as a quaternion that rotates the gravity vector fr
 The accelerometer values are sensitive to vibrations. The gyroscope is used to keep track of the gravity vector and correct the accelerometer readings.
 
 
-
 Usage
 ********
 To use the library, read the accelerometer, gyro values, and calculate the time taken to complete a loop.
 
-```C
+```
+
 /*
 fused_vector - corrected accelerometer readings
 delta - delay or time taken to complete a loop
@@ -43,12 +43,10 @@ fused_vector = update_fused_vector(fused_vector,ax,ay,az,wx,wy,wz,delta);
   
 q_acc = quaternion_from_accelerometer(fused_vector.a,fused_vector.b,fused_vector.c);
 angles = quaternion_to_euler_angles(q_acc);
+
 ```
+
 Note: To calculate correct delta please synchronize sensor readings with the software.
-
-Development kits
-================
-
 
 
 Building and running

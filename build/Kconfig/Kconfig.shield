@@ -1,0 +1,2 @@
+osource "c:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/boards/shields/*/Kconfig.shield"
+osource "C:/ncs/v1.9.1/nrf/boards/shields/*/Kconfig.shield"
