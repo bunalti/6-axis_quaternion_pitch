@@ -22,7 +22,7 @@
 	sck-pin = <12>;
 	mosi-pin = <13>;
 	miso-pin = <14>;
-	//cs-gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
+	//cs-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
 };
 
 &gpio0 {

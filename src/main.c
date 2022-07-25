@@ -70,6 +70,11 @@ void main(void)
 
 	begin_bmx160(&bmxIMU_spi);
 
+
+	fused_vector = vector_3d_initialize(0.0,0.0,-1.0);
+	q_acc = quaternion_initialize(1.0,0.0,0.0,0.0);
+
+	
 	for (;;) {
     // Main entry point after IMU sensors and BLE init 
 
