@@ -31,7 +31,7 @@ I had the left one in my local distributors.
 .. image:: testing/BMI160.png
    :width: 800
 
-Pins of the SPI_0 port on nRF52832 are configured in device tree * ``boards\arm\pedal_board\pedal_board.dt``
+Pins of the SPI_0 port on nRF52832 are configured in device tree  ``boards\arm\pedal_board\pedal_board.dt``
 
 Here is the connection table,
 
@@ -59,7 +59,12 @@ I have connected all on a breadboard for ease of development.
 Testing
 =======
 
-For testing I have build a rotating wheel with adjustable rotational speed.
+For testing I have build a rotating wheel with adjustable rotational speed. The firmware for the test jig can be found at ``testing\testingWheelFW``
+
+.. image:: testing/testJig.jpg
+   :width: 800
+
+
 
 Reference/Credits/Sources
 *************************
