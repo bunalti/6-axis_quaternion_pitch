@@ -22,6 +22,11 @@ The orientation is calculated as a quaternion that rotates the gravity vector fr
 The accelerometer values are sensitive to vibrations. The gyroscope is used to keep track of the gravity vector and correct the accelerometer readings.
 
 
+Algorithm
+*********
+
+.. image:: /algorithm/algorithmPapyrus.pdf
+
 Building and running
 ********************
 
