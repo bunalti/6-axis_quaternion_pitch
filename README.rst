@@ -25,6 +25,8 @@ The accelerometer values are sensitive to vibrations. The gyroscope is used to k
 Algorithm
 *********
 
+The PDF and Mathcad 15 file can be found at ``algorithm\``
+
 .. image:: /algorithm/algorithmPapyrus_Page_1.jpg
    :width: 800
 
