@@ -42,11 +42,6 @@ The PDF and Mathcad 15 file can be found at ``algorithm\``
 .. image:: /algorithm/algorithmPapyrus_Page_5.jpg
    :width: 800
 
-.. image:: /algorithm/algorithmPapyrus_Page_6.jpg
-   :width: 800
-
-.. image:: /algorithm/algorithmPapyrus_Page_7.jpg
-   :width: 800
 
 
 Building and running
