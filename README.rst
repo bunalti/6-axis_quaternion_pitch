@@ -140,14 +140,13 @@ There is two tests conducted with the opposed setup,
 #. Dynamic, where wheel rotated at a constant speed.
 
 
+.. image:: testing/matlabSignalSync/dynamic.jpg
+   :width: 800
 
 .. image:: testing/matlabSignalSync/quasi_static.jpg
    :width: 800
-   Quasi-static Test Result (Units are degrees/sample)
 
-.. image:: testing/matlabSignalSync/dynamic.jpg
-   :width: 800
-   Dynamic Test Result (Units are degrees/sample)
+
 
 
 
