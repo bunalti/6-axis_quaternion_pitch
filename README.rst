@@ -139,12 +139,13 @@ There is two tests conducted with the opposed setup,
 #. Quasi-static, where wheel rotation is done manually.
 #. Dynamic, where wheel rotated at a constant speed.
 
-
+.. image:: testing/matlabSignalSync/quasi_static.jpg
+   :width: 800
+   
 .. image:: testing/matlabSignalSync/dynamic.jpg
    :width: 800
 
-.. image:: testing/matlabSignalSync/quasi_static.jpg
-   :width: 800
+
 
 
 
