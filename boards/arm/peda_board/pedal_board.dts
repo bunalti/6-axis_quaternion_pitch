@@ -15,6 +15,10 @@
 	};
 };
 
+&gpio0 {
+	status = "okay";
+};
+
 &spi0 {
 	compatible = "nordic,nrf-spi";
 	/* BMX160 IMU sensor */
@@ -25,9 +29,26 @@
 	//cs-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
 };
 
-&gpio0 {
+&spi1 {
+	compatible = "nordic,nrf-spi";
 	status = "okay";
+	sck-pin = <19>;
+	mosi-pin = <24>;
+	miso-pin = <22>;
+	miso-pull-up;
+
+	cs-gpios = <&gpio0 23 GPIO_ACTIVE_LOW>;
+
+	sdhc0: sdhc@0 {
+			compatible = "zephyr,mmc-spi-slot";
+			reg = <0x0>;
+			status = "okay";
+			label = "SDHC0";
+			spi-max-frequency = <24000000>;
+	};
 };
+
+
 
 
 &flash0 {

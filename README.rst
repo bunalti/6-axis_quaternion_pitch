@@ -81,10 +81,73 @@ I have connected all on a breadboard for ease of development.
 Testing
 =======
 
-For testing I have build a rotating wheel with adjustable rotational speed. The firmware for the test jig can be found at ``testing\testingWheelFW``
+For testing I have build a rotating wheel with adjustable rotational speed. The firmware for the test jig can be found at ``\testing\test_FW``
 
 .. image:: testing/testJig.jpg
    :width: 800
+
+
+In addition there needed to be a battery powered device where the IMU data can be logged.
+
+.. image:: testing/imuLogger.jpg
+   :width: 800
+
+
+Encoder Motor Specifications,
+
++--------------+------------+
+|     Spec     |    Value   | 
+|              |            |
++==============+============+
+| Speed        |  330RPM    |
++--------------+------------+
+| Voltage      |    12V     |
++--------------+------------+
+| Gear Ratio   |   100:1    |
++--------------+------------+
+| PPM          |     12     |
++--------------+------------+
+| Precision    |   0.3deg   |
++--------------+------------+
+
+
+
+Test Setup
+-----------
+
+.. image:: testing/testPrep1.jpg
+   :width: 800
+
+.. image:: testing/testPrep2.jpg
+   :width: 800
+
+The data is collected and processed through Matlab software. The datasets and the matlab software can be fount at ``\testing\matlabSignalSync``
+
+The challenges of the prepared testing setup is
+
+- High backlash of gearmotor and gears (Reduces precision)
+- Low motor torque (Constant angular velocity cannot be achieved)
+- Asynchronus data collection (Reduces the dataset quality)
+- Low encoder resolution 
+
+
+Test Results
+------------
+
+There is two tests conducted with the opposed setup, 
+
+   1) Quasi-static, where wheel rotation is done manually.
+   2) Dynamic, where wheel rotated at a constant speed.
+
+
+
+.. figure:: testing/matlabSignalSync/quasi_static.jpg
+   :width: 800px
+   Quasi-static Test Result (Units are degrees/sample)
+
+.. figure:: testing/matlabSignalSync/dynamic.jpg
+   :width: 800px
+   Dynamic Test Result (Units are degrees/sample)
 
 
 

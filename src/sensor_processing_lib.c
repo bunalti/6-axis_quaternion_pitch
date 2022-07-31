@@ -7,7 +7,7 @@ Quaternion quaternion_from_accelerometer(float ax, float ay, float az)
     vector_ijk accelerometer = vector_3d_initialize(ax, ay, az);
     Quaternion orientation = quaternion_between_vectors(gravity,accelerometer);
     return orientation;*/
-    float norm_u_norm_v = 1.0;
+    //float norm_u_norm_v = 1.0;
     float cos_theta = -1.0*az;
     //float half_cos = sqrt(0.5*(1.0 + cos_theta));
     float half_cos = 0.7071*sqrt(1.0 + cos_theta);

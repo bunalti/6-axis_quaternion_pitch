@@ -297,7 +297,7 @@ int writeReg_bmx160(bmx160_spi * bmxIMU_spi_p, uint8_t reg, uint8_t data)
 int readReg_bmx160(bmx160_spi * bmxIMU_spi_p, uint8_t reg, uint8_t *data, size_t len)
 {
     int result;
-	unsigned char tx_buffer[2] = { 0, };
+	unsigned char tx_buffer[2] = { 0, 0};
 
 	tx_buffer[0] = 0x80 | reg;
 

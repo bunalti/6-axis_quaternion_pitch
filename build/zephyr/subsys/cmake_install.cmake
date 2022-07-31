@@ -49,6 +49,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/disk/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/fs/cmake_install.cmake")
 endif()
 

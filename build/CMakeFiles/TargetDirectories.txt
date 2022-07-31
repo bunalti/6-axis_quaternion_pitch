@@ -85,6 +85,9 @@ C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/debug/CM
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/debug/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/logging/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/logging/CMakeFiles/rebuild_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/disk/CMakeFiles/edit_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/disk/CMakeFiles/rebuild_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/fs/CMakeFiles/subsys__fs.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/fs/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/fs/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/subsys/ipc/CMakeFiles/edit_cache.dir
@@ -124,6 +127,7 @@ C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/drivers/misc/CM
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/drivers/misc/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/drivers/pcie/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/drivers/pcie/CMakeFiles/rebuild_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/drivers/disk/CMakeFiles/drivers__disk.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/drivers/disk/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/drivers/disk/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/zephyr/drivers/usb/CMakeFiles/edit_cache.dir
@@ -165,6 +169,9 @@ C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/net
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/net/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/net/lib/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/net/lib/CMakeFiles/rebuild_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/esb/CMakeFiles/..__nrf__subsys__esb.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/esb/CMakeFiles/edit_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/esb/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/dfu/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/dfu/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/nrf/subsys/debug/CMakeFiles/edit_cache.dir
@@ -213,8 +220,9 @@ C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/cmsis/CMSIS/CM
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/cmsis/CMSIS/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/cmsis/CMSIS/Core/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/cmsis/CMSIS/Core/CMakeFiles/rebuild_cache.dir
-C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/fatfs/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/fatfs/CMakeFiles/rebuild_cache.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/fatfs/CMakeFiles/..__modules__fs__fatfs.dir
+C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/fatfs/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/hal_nordic/CMakeFiles/edit_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/hal_nordic/CMakeFiles/rebuild_cache.dir
 C:/Users/kerem/Desktop/temp/6-axis_quaternion_pitch/build/modules/hal_nordic/nrfx/CMakeFiles/modules__hal_nordic__nrfx.dir

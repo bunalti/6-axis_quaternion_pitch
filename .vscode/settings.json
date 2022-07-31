@@ -14,6 +14,10 @@
     "quaternion.h": "c",
     "vector_3d.h": "c",
     "math.h": "c",
-    "armclang.h": "c"
-  }
+    "armclang.h": "c",
+    "stdlib.h": "c",
+    "stdio.h": "c",
+    "fs.h": "c"
+  },
+  "cortex-debug.variableUseNaturalFormat": true
 }
