@@ -93,6 +93,9 @@ In addition there needed to be a battery powered device where the IMU data can b
    :width: 800
 
 
+For bedding of the shaft of the rotating wheel SKF 623-2Z bearing is used.
+
+
 Encoder Motor Specifications,
 
 +--------------+------------+
@@ -103,7 +106,7 @@ Encoder Motor Specifications,
 +--------------+------------+
 | Voltage      |    12V     |
 +--------------+------------+
-| Gear Ratio   |   100:1    |
+| Gear Ratio   |   75:1     |
 +--------------+------------+
 | PPM          |     12     |
 +--------------+------------+
@@ -111,9 +114,35 @@ Encoder Motor Specifications,
 +--------------+------------+
 
 
+Then the dynamic tests revealed that the required torque and the encoder resolution is higher than the presented motor - encoder assembly above.
+Instead of a micrometal motor the test setup is upgraded to 25D Pololu gearmotors and Pololu Simple motor controller.
 
-Test Setup
------------
+.. image:: testing/new_setup.jpeg
+   :width: 800
+
+
+https://www.pololu.com/product/4846
+https://www.pololu.com/product/1373
+
+
++--------------+------------+
+|     Spec     |    Value   | 
+|              |            |
++==============+============+
+| Speed        |  130RPM    |
++--------------+------------+
+| Voltage      |    12V     |
++--------------+------------+
+| Gear Ratio   |   75:1     |
++--------------+------------+
+| PPM          |     48     |
++--------------+------------+
+
+
+
+
+Test Setup - 1
+----------------
 
 .. image:: testing/testPrep1.jpg
    :width: 800
@@ -131,24 +160,56 @@ The challenges of the prepared testing setup is
 - Low encoder resolution 
 
 
-Test Results
-------------
+
+Test Results - 1
+------------------
 
 There is two tests conducted with the opposed setup, 
 
 #. Quasi-static, where wheel rotation is done manually.
 #. Dynamic, where wheel rotated at a constant speed.
 
-.. image:: testing/matlabSignalSync/quasi_static.jpg
+.. image:: testing/matlabSignalSync/quasi_static_2.jpg
    :width: 800
    
 .. image:: testing/matlabSignalSync/dynamic.jpg
    :width: 800
 
 
+Test Setup - 2
+----------------
+
+The data is collected and processed through Matlab software. The datasets and the matlab software can be fount at ``\testing\matlabSignalSync``
+The firmware is now updated with NTP codes for synchronization. The test jig connects to internet via Wi-Fi to timestamp collected data. The firmware for NTP can be found  ``\testing\test_FW\NTP_fw``
+
+Also the motor, encoder and motor driver is upgraded to achieve higher precision and stability in dynamic testing. In addition a 17cm pedal like part is used to simulate a bicycle pedal.
 
 
+.. image:: testing/matlabSignalSync/new2.jpeg
+   :width: 800
+   
+.. image:: testing/matlabSignalSync/new1.jpeg
+   :width: 800
 
+The challenges of the prepared testing setup is
+
+- High backlash of gearmotor and gears (Reduces precision)
+- Low encoder resolution (Top precision should be deployed PPR > 512 )
+
+
+Test Results - 2
+------------------
+
+There is two tests conducted with the opposed setup, 
+
+#. Dynamic, where wheel rotated at a constant speed, at 93RPM
+#. Dynamic, where wheel rotated at a constant speed, at 170RPM
+
+.. image:: testing/matlabSignalSync/dynamic_test_new_motor.jpg
+   :width: 800
+   
+.. image:: testing/matlabSignalSync/dynamic_test_5.jpg
+   :width: 800
 
 
 Reference/Credits/Sources
