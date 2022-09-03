@@ -122,6 +122,7 @@ Instead of a micrometal motor the test setup is upgraded to 25D Pololu gearmotor
 
 
 https://www.pololu.com/product/4846
+
 https://www.pololu.com/product/1373
 
 
@@ -185,10 +186,10 @@ The firmware is now updated with NTP codes for synchronization. The test jig con
 Also the motor, encoder and motor driver is upgraded to achieve higher precision and stability in dynamic testing. In addition a 17cm pedal like part is used to simulate a bicycle pedal.
 
 
-.. image:: testing/matlabSignalSync/new2.jpeg
+.. image:: testing/new2.jpeg
    :width: 800
    
-.. image:: testing/matlabSignalSync/new1.jpeg
+.. image:: testing/new1.jpeg
    :width: 800
 
 The challenges of the prepared testing setup is
