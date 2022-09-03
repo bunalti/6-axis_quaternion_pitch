@@ -258,7 +258,7 @@ uint8_t getData_bmx160(bmx160_spi * bmxIMU_spi_p, bmx160_sensor_data * sen_data)
     sen_data->ay = (float)(y) * accelRange;
     sen_data->az = (float)(z) * accelRange;
 #else
-    #error Please Select only the sed CHIP in 'bmx160.h'
+    #error Please Select only the used CHIP in 'bmx160.h'
 #endif
 
     return result;

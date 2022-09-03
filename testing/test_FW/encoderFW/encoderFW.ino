@@ -31,10 +31,10 @@ void loop() {
   long newPosition = myEnc.read();
   delta = (1.0f/60.0f) * 0.001f * (millis()-time_start);
 
-  velocity = ((newPosition-oldPosition)/1200.0f) / delta;
+  velocity = ((newPosition-oldPosition)/3591.84f) / delta;
   
-  pos = newPosition % 1200;
-  angle = (pos/1200.0f) * 360.0f;
+  pos = newPosition % 3592;
+  angle = (pos/3591.84f) * 360.0f;
   
 
   
@@ -45,7 +45,7 @@ void loop() {
 
   oldPosition = newPosition;
   time_start = millis();
-  delay(3);
+  delay(1);
 
   
 }

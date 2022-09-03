@@ -343,68 +343,68 @@ void main(void)
 
     // Read filtered BMX160 IMU data at 200MHZ and store it to the struct
 	err = getData_bmx160(&bmxIMU_spi, &bmx160_data);
-	if (bmx160_data.gx == BMX160_OK)
+	if (bmx160_data.ax == 0)
 	{
 		gpio_pin_set(device_get_binding("GPIO_0"), 7, 0);
 	}
 	
 
-	// delta = 0.001f * SENSOR_READ_MS_THREAD;
-	// //  Serial.print("Time Delta: \t");
-	// //  Serial.print(delta,16);
-	// //  Serial.println();
+	delta = 0.001f * SENSOR_READ_MS_THREAD;
+	//  Serial.print("Time Delta: \t");
+	//  Serial.print(delta,16);
+	//  Serial.println();
 
-	// fused_vector = update_fused_vector(fused_vector,
-	// 								   bmx160_data.ax,bmx160_data.ay,bmx160_data.az,
-	// 								   bmx160_data.gx,bmx160_data.gy,bmx160_data.gz,
-	// 								   delta);
+	fused_vector = update_fused_vector(fused_vector,
+									   bmx160_data.ax,bmx160_data.ay,bmx160_data.az,
+									   bmx160_data.gx,bmx160_data.gy,bmx160_data.gz,
+									   delta);
 
-	// q_acc = quaternion_from_accelerometer(fused_vector.a,fused_vector.b,fused_vector.c);
-	// angles = quaternion_to_euler_angles(q_acc);
+	q_acc = quaternion_from_accelerometer(fused_vector.a,fused_vector.b,fused_vector.c);
+	angles = quaternion_to_euler_angles(q_acc);
 
-	// if(angles.yaw > 0 && angles.pitch > 0)
-	// 	pitch_angle = angles.pitch;
-	// else if(angles.yaw < 0 && angles.pitch > 0)
-	// 	pitch_angle = 180 - angles.pitch;
-	// else if(angles.yaw > 0 && angles.pitch < 0)
-	// 	pitch_angle = 180 - angles.pitch;    
-	// else if(angles.yaw < 0 && angles.pitch < 0)
-	// 	pitch_angle = 360 + angles.pitch;
-	//
-	//len = sprintf(data,"%f\n",pitch_angle);
+	if(angles.yaw > 0 && angles.pitch > 0)
+		pitch_angle = angles.pitch;
+	else if(angles.yaw < 0 && angles.pitch > 0)
+		pitch_angle = 180 - angles.pitch;
+	else if(angles.yaw > 0 && angles.pitch < 0)
+		pitch_angle = 180 - angles.pitch;    
+	else if(angles.yaw < 0 && angles.pitch < 0)
+		pitch_angle = 360 + angles.pitch;
+	
+	len = sprintf(data,"%f\n",pitch_angle);
 
 	// len = sprintf(data, "G_B: %.3f, %.3f, %.3f\nA_B: %.3f, %.3f, %.3f", 
 	// bmx160_data.gx, bmx160_data.gy, bmx160_data.gz,
 	// bmx160_data.ax, bmx160_data.ay, bmx160_data.az);
 
 
-// 	if(len > 0){
-// 		res = fs_open(&file, filename, FS_O_CREATE | FS_O_RDWR);
+	if(len > 0){
+		res = fs_open(&file, filename, FS_O_CREATE | FS_O_RDWR);
 
-// 		if (res < 0) {
-// 			printk("FAIL: open %s: %d", filename, res);
-// 			goto out;
-// 		}
+		if (res < 0) {
+			printk("FAIL: open %s: %d", filename, res);
+			goto out;
+		}
 
-// 		res = fs_seek(&file, 0, FS_SEEK_END);
-// 		if (res < 0) {
-// 			printk("FAIL: seek %s: %d", filename, res);
-// 			goto out;
-// 		}	
+		res = fs_seek(&file, 0, FS_SEEK_END);
+		if (res < 0) {
+			printk("FAIL: seek %s: %d", filename, res);
+			goto out;
+		}	
 		
 
 
-// 		res = fs_write(&file, data, len);
-// 		if (res < 0) {
-// 			printk("FAIL: write %s: %d", filename, res);
-// 			goto out;
-// 		}
-//  out:
-// 		res = fs_close(&file);
-// 		if (res < 0) {
-// 			printk("FAIL: close %s: %d", filename, res);
-// 		}
-// 	}
+		res = fs_write(&file, data, len);
+		if (res < 0) {
+			printk("FAIL: write %s: %d", filename, res);
+			goto out;
+		}
+ out:
+		res = fs_close(&file);
+		if (res < 0) {
+			printk("FAIL: close %s: %d", filename, res);
+		}
+	}
 
 		
     // Sleep and wait for next cycle
