@@ -12,6 +12,10 @@ Requirements
 ************
 
 * nRF52832 Sparkfun Board
+* ESP32 DevkitC
+* Pololu Simple Motor Controller 18v7
+* 75:1 Metal Gearmotor 25Dx69L mm HP 12V with 48 CPR Encoder
+* Arduino uNO
 * Segger J-Link Edu-Mini
 * BoschSensortech BMI160 or BMX160
 * Power Source
